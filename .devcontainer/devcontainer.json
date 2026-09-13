@@ -1,0 +1,18 @@
+{
+  "name": "Master CAF (R + Python)",
+  "image": "ghcr.io/rocker-org/devcontainer/r-ver:4",
+  "features": {
+    "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
+      "version": "none",
+      "installJupyterlab": true
+    },
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+  },
+  "postCreateCommand": "pip install --upgrade pip ipykernel numpy pandas matplotlib scipy streamlit",
+  "customizations": {
+    "vscode": {
+      "extensions": ["REditorSupport.r", "ms-python.python", "ms-toolsai.jupyter", "quarto.quarto"]
+    }
+  }
+}
